@@ -1,0 +1,25 @@
+.events-header {
+  font-family: serif;
+  a {
+    color: #fff;
+    &:hover {
+      color: #FFCCCC;
+    }
+  }
+}
+
+.events-date {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+.events-description {
+  font-family: serif;
+}
+
+.event-row {
+  margin-bottom: 0.5rem;
+}

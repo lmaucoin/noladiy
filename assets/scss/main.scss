@@ -1,0 +1,77 @@
+@use 'includes/_classic.scss';
+@use 'includes/_events.scss';
+@use 'includes/_forms.scss';
+@use '../node_modules/js-datepicker/dist/datepicker.min.css';
+
+body {
+  font-family: serif;
+  padding-top: 2rem;
+}
+
+.body-content {
+  margin: 1rem auto 0;
+  max-width: 725px;
+}
+
+
+.header-events {
+  text-align: right;
+  line-height: 3rem;
+}
+
+#home-events {
+  margin-top: 2rem;
+  text-align: center;
+  h3 {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #events-tonight {
+    margin: 2rem 0 1rem;
+    background-color: #222;
+    padding: 1rem;
+  }
+}
+
+#home-announcements {
+  h3 {
+    text-align: center;
+    margin: 1.25rem 0;
+  }
+  li {
+    font-family: serif;
+  }
+}
+
+.venue.nav {
+  li {
+    padding-right: 0.5rem;
+    &:before {
+      content: "|";
+      margin-right: 0.5rem;
+    }
+    &:first-child {
+      &:before {
+        content: "";
+        margin: 0;
+      }
+    }
+  }
+}
+
+footer#footer {
+  font-family: serif;
+}
+
+.breadcrumb-link {
+  margin-right: 1rem;
+}
+
+a.btn {
+  text-decoration: none;
+  &.btn-event-admin {
+    padding: 0 0.5rem;
+    margin-left: 1rem;
+  }
+}

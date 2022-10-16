@@ -1,0 +1,53 @@
+version: '2.2'
+services:
+
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: noladiy_php
+    depends_on:
+      - database
+    links:
+      - database
+    volumes:
+      - .:/var/www/html
+      - ./docker-config/php.ini:/usr/local/etc/php/php.ini
+      - noladiy_db:/var/lib/mysql
+      - css:/var/www/html/web/css
+    ports:
+      - 8888:80
+    environment:
+      MYSQL_ROOT_PASSWORD: redchess15
+      MYSQL_DATABASE: noladiy
+      MYSQL_USER: noladiy
+      MYSQL_PASSWORD: oldpanther95
+    networks:
+      default:
+        aliases:
+          - php
+    env_file: .docker.env
+  database:
+    image: mariadb
+    container_name: noladiy_db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: redchess15
+      MYSQL_DATABASE: noladiy
+      MYSQL_USER: noladiy
+      MYSQL_PASSWORD: oldpanther95
+      MYSQL_HOST: database
+    volumes:
+      - noladiy_db:/var/lib/mysql
+    env_file: .docker.env
+  sass:
+    image: michalklempa/dart-sass:latest
+    volumes:
+      - css:/css
+      - ./assets/scss/:/sass
+      - ./node_modules/:/node_modules
+
+volumes:
+  noladiy_db:
+  css:

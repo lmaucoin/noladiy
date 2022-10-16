@@ -1,0 +1,107 @@
+/** Vintage NOLADIY styles  **/
+body {
+	background-color: #000000;
+	color: #CCCCCC;
+}
+
+h1 {
+	color: #EEEEFF;
+  font-family: "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+}
+
+a:link {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+
+.event {
+	position:relative;
+	padding-left: 200px;
+	padding-bottom: 15px;
+}
+
+a:visited {
+	color: #EEE;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FFCCCC;
+}
+
+.logoJustified {
+	font-family: "Times New Roman", Times, serif;
+	color: #FFFFFF;
+	text-align: justify;
+}
+
+.navTitle {
+	font-family: "Times New Roman", Times, serif;
+	color: #EEEEEE;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.navItem {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+.navItem A:link, .navItem A:active {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.navItem A:visited {
+	color: #EEE;
+	text-decoration: underline;
+}
+
+.navItem A:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+.smallText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #EEE;
+}
+
+.titleTable {
+	background-image: url(/graphics/skull.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.rowFormat {
+	border-bottom: 1px solid #CCC;
+	padding-top: 5px 10px 5px 5px;
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.txtBox {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.smallEvent {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+

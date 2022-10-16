@@ -1,0 +1,28 @@
+    {{ register_asset_bundle('app/assets/AppAsset') }}  {# asset root for yii advanced template #}
+    {{   void(this.beginPage()) }}
+    <!DOCTYPE html>
+    <html lang="{{ app.language }}">
+        <head>
+            <meta charset="{{ app.charset }}">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>{{ this.blocks['titleTag'] | raw | trim }}</title>
+            {{ html.csrfMetaTags | raw }}
+            {{   void(this.head) }}
+        </head>
+        <body>
+            {{   void(this.beginBody()) }}
+            <section id="header">
+                {# header content #}
+            </section>
+            {{ this.blocks['pageContent'] | raw }}
+            <footer id="footer" class="mt-auto py-3">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center">NOLA DIY 1998 - {{ "now"|date("Y") }}</div>
+                </div>
+              </div>
+            </footer>
+            {{   void(this.endBody()) }}
+        </body>
+    </html>
+    {{   void(this.endPage()) }}
