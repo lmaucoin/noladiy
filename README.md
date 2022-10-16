@@ -28,6 +28,7 @@ Start the container
 
 Run database migrations
 
+    docker-compose run noladiy_php ./yii migrate --migrationPath=@yii/rbac/migrations
     docker-compose run noladiy_php ./yii migrate/up
 
 Create an administrator user
