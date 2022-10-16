@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\User;
 use app\models\UserSearch;
 use yii\web\Controller;
@@ -138,5 +139,19 @@ class UserController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    /**
+     * Requires all users to be logged in before doing anything here.
+     */
+    public function beforeAction($action) {
+      if(Yii::$app->user->isGuest) {
+        Yii::$app->user->loginRequired();
+      }
+      if (!parent::beforeAction($action)) {
+        return false;
+      }
+
+      return true;
     }
 }
