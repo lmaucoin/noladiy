@@ -57,7 +57,8 @@ Copy the .env.example file to .env and change the values for the database to tho
 
 Run the database migrations to seed the database with required data
 
-  ./yii migrate/up
+    ./yii migrate --migrationPath=@yii/rbac/migrations
+    ./yii migrate/up
 
 **NOTES:**
 - Yii won't create the database for you, this has to be done manually before you can access it.
