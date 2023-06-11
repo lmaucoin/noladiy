@@ -2,19 +2,17 @@ version: '2.2'
 services:
 
   webserver:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: yiisoftware/yii2-php:8.2-apache
     container_name: noladiy_php
     depends_on:
       - database
     links:
       - database
     volumes:
-      - .:/var/www/html
+      - .:/app/
       - ./docker-config/php.ini:/usr/local/etc/php/php.ini
       - noladiy_db:/var/lib/mysql
-      - css:/var/www/html/web/css
+      - css:/app/web/css
     ports:
       - 8888:80
     environment:
