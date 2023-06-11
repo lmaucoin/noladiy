@@ -24,7 +24,7 @@ $isAdmin  = ($loggedIn && Yii::$app->user->identity->role == 20);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="h-100">
+<html lang="<?= Yii::$app->language ?>" class="h-100" data-bs-theme="dark">
 <head>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
