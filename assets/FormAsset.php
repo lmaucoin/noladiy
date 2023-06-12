@@ -10,21 +10,18 @@ namespace app\assets;
 use yii\web\AssetBundle;
 
 /**
- * Main application asset bundle.
+ * Form asset bundle.
  *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @since 2.0
  */
-class AppAsset extends AssetBundle
+class FormAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/main.css'
+        'css/forms.css'
     ];
     public $js = [
-      'js/main.js',
-      'js/app.js'
+      'js/forms.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

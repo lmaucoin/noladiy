@@ -9,7 +9,7 @@
   "scripts": {
     "sass-dev": "sass --watch --update --style=expanded assets/scss:web/css",
     "sass-prod": "sass --no-source-map --style=compressed assets/scss:web/css",
-    "build": "esbuild assets/js/app.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=web/js/app.js"
+    "build": "esbuild assets/js/*.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outdir=web/js/"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/lmaucoin/noladiy#readme",
   "dependencies": {
+    "@yaireo/tagify": "^4.17.8",
     "esbuild": "^0.15.10",
     "js-datepicker": "^5.18.0",
     "sass": "^1.55.0"
