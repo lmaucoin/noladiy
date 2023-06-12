@@ -9,6 +9,9 @@ use app\models\User;
 /** @var yii\web\View $this */
 /** @var app\models\Events $model */
 /** @var yii\widgets\ActiveForm $form */
+
+use app\assets\FormAsset;
+FormAsset::register($this);
 ?>
 
 <div class="events-form">

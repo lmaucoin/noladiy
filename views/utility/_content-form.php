@@ -3,6 +3,9 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 
+use app\assets\FormAsset;
+FormAsset::register($this);
+
 foreach($contents as $content) {
   $form = ActiveForm::begin();
   echo Html::activeHiddenInput($content, "id");

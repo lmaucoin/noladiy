@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+use app\assets\FormAsset;
+FormAsset::register($this);
+
 /** @var yii\web\View $this */
 /** @var app\models\User $model */
 /** @var yii\widgets\ActiveForm $form */
